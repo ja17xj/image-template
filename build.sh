@@ -4,7 +4,16 @@ set -ouex pipefail
 RELEASE="$(rpm -E %fedora)"
 
 # Install and remove rpm packages
-rpm-ostree install android-tools cowsay figlet gcc gcc-c++ gdb lolcat neofetch netcat nmap python3 python3-pip testdisk vim-enhanced whois wl-clipboard adw-gtk3-theme youtube-dl lm_sensors vulkan-tools
-rpm-ostree override remove firefox firefox-langpacks gnome-software-rpm-ostree
+rpm-ostree install android-tools gcc gcc-c++ gdb python3 python3-pip \
+					cowsay figlet lolcat neofetch \
+					netcat nmap testdisk vim-enhanced vim-default-editor youtube-dl whois wl-clipboard \
+					lm_sensors vulkan-tools \
+      				adw-gtk3-theme papirus-icon-theme ibus-mozc gnome-console
+
+rpm-ostree override remove firefox firefox-langpacks \
+							gnome-software gnome-software-rpm-ostree epiphany-runtime gnome-terminal gnome-terminal-nautilus \
+							anthy-unicode ibus-anthy ibus-anthy-python kasumi-common kasumi-unicode ibus-hangul libhangul ibus-libzhuyin libzhuyin \
+							nano nano-default-editor 
+							
 
 # Install flatpak packages [WIP]
