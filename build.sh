@@ -13,7 +13,8 @@ rpm-ostree install android-tools gcc gcc-c++ gdb python3 python3-pip \
 rpm-ostree uninstall firefox firefox-langpacks \
 							gnome-software gnome-software-rpm-ostree epiphany-runtime gnome-terminal gnome-terminal-nautilus \
 							anthy-unicode ibus-anthy ibus-anthy-python kasumi-common kasumi-unicode ibus-hangul libhangul ibus-libzhuyin libzhuyin \
-							nano nano-default-editor default-editor 
+							nano nano-default-editor default-editor \
+							gnome-tour 
 							
 
 # Install flatpak packages [WIP]
