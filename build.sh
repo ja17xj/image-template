@@ -4,7 +4,7 @@ set -ouex pipefail
 RELEASE="$(rpm -E %fedora)"
 
 # Install and remove rpm packages
-echo "install_weak_deps=False" >> /etc/dnf/dnf.conf
+sed -i '$ a install_weak_deps=False' /etc/dnf/dnf.conf
 
 rpm-ostree install android-tools gcc gcc-c++ gdb python3 python3-pip \
 					cowsay figlet lolcat neofetch \
